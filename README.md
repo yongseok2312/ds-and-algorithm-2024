@@ -14,14 +14,16 @@
 ## 3일차
 - 파이썬 자료구조
     - 단순 연결 리스트 다시
-    - 원형 연결 리스트
-    - 스택
-    - 큐
+    - 원형 연결 리스트(패스) : 마지막 노드가 첫 노드와 연결
+    - 큐: First In First out(FIFO)
+    - 스택: Last in First out(LIFO)
+        - pop - list.pop()
+        - push - list.append()와 동일
     - 트리
     - 그래프
 
 ## 4일차
-
+- 파이썬 구조 자료
 ## 5일차
 
 ## 6일차
