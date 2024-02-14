@@ -16,8 +16,11 @@
     - 단순 연결 리스트 다시
     - 원형 연결 리스트(패스) : 마지막 노드가 첫 노드와 연결
     - 큐: First In First out(FIFO)
+
     ![queue](https://upload.wikimedia.org/wikipedia/commons/6/6d/QUEUE.png)
+    
     - 스택: Last in First out(LIFO)
+
     ![stack](https://cs.lmu.edu/~ray/images/stack.gif)
         - pop - list.pop()
         - push - list.append()와 동일
