@@ -22,6 +22,7 @@
     - 스택: Last in First out(LIFO)
 
     ![stack](https://cs.lmu.edu/~ray/images/stack.gif)
+   
         - pop - list.pop()
         - push - list.append()와 동일
     - 트리
