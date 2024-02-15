@@ -3,10 +3,18 @@
 
 # queue 풀 함수
 def isQueueFull():
-    global SIZE, rear
-    if rear == (SIZE - 1):
+    global SIZE, rear, front, queue
+    if rear != (SIZE-1):    # 큐가 아직 빈상태
+        return False
+    elif rear == (SIZE-1) and front == -1: # 큐가 꽉찬 상태
         return True
-    else:
+    else: # 큐가 앞쪽이 비어있는 상태, rear가 끝까지 간 상태
+        while front != -1:  # 완전히 앞으로 당긴다
+            for i in range(front+1, SIZE):
+             queue[i-1] = queue[i]
+             queue[i] = None
+            front -=1
+            rear -=1
         return False
     
 # queue 엠티 확인 함수
@@ -56,6 +64,13 @@ front = rear = -1
 
 # 메인 코드
 if __name__ == '__main__':
+#   queue = [None, None, '문별', '휘인', '선미']
+#   front  =1
+#   rear = 4 
+#   print(isQueueFull())
+#   print(queue)
+  
+  
     while True:
         select = input('삽입(e), 추출(d), 확인(p), 종료(x) > ')
 
