@@ -25,11 +25,11 @@
 
     ![queue](https://github.com/yongseok2312/ds-and-algorithm-2024/blob/main/image/queue.png)
     
-    - 트리
-    - 그래프
-
 ## 4일차
 - 파이썬 구조 자료
+    - 큐 다시
+    - 트리
+    - 그래프
 ## 5일차
 
 ## 6일차
