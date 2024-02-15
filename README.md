@@ -23,7 +23,7 @@
         - push - list.append()와 동일
     - 큐: First In First out(FIFO)
 
-    ![queue](https://raw.githubusercontent.com/yongseok2312/ds-and-algorithm-2024/ds-and-algorithm-2024/image/queue.png)
+    ![queue](https://github.com/yongseok2312/ds-and-algorithm-2024/blob/main/image/queue.png)
     
     - 트리
     - 그래프
