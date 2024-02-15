@@ -1,22 +1,15 @@
-# file: ds16_queue.py
-# desc: 큐 일반 구현
+# file: ds17_circularqueue.py
+# desc: 원형 큐 일반 구현 원형 큐에서는 rear|front % SIZE 개념이 핵심
 
 # queue 풀 함수
 def isQueueFull():
     global SIZE, rear, front, queue
-    if rear != (SIZE-1):    # 큐가 아직 빈상태
-        return False
-    elif rear == (SIZE-1) and front == -1: # 큐가 꽉찬 상태
+    if (rear+1) % SIZE == front:
         return True
-    else: # 큐가 앞쪽이 비어있는 상태, rear가 끝까지 간 상태
-        while front != -1:  # 완전히 앞으로 당긴다
-            for i in range(front+1, SIZE):
-             queue[i-1] = queue[i]
-             queue[i] = None
-            front -=1
-            rear -=1
+    else:
         return False
     
+
 # queue 엠티 확인 함수
 def isQueueEmpty():
     global front, rear
@@ -27,40 +20,40 @@ def isQueueEmpty():
     
 # queue 데이터 삽입 함수
 def enQueue(data):
-    global queue, rear
+    global queue, rear,SIZE
     if isQueueFull() == True: # 큐가 꽉차서 데이터 입력 불가
         print('큐가 꽉찼습니다.')
         return # 함수 탈출
     else:
-        rear+=1
+        rear = (rear+1) % SIZE
         queue[rear] = data
 
 # queue 데이터 추출 함수
 def deQueue():
-    global front,queue
+    global front,queue, SIZE
     if isQueueEmpty()==True:
         print('큐가 비었습니다.')
         return
     else:
-        front +=1
+        front = (front+1) % SIZE
         data = queue[front]
-        queue[front] = None
+        queue[data] = None
         return data
     
 # 추출 데이터 확인함수
 def peek():
-    global queue, front
+    global queue, front,SIZE
     if isQueueEmpty() == True:
         print('큐가 비었습니다.')
         return None
     else:
-        return queue[front+1]
+        return queue[(front+1)%SIZE]
     
 
 # 전역 변수
 SIZE = int(input('큐 크기 입력하세요(정수) > '))   # 상수(constant) 대문자 사용
 queue = [ None for _ in range(SIZE)]
-front = rear = -1
+front = rear = 0
 
 # 메인 코드
 if __name__ == '__main__':
