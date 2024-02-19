@@ -47,6 +47,12 @@
 - 파이썬 자료구조/알고리즘
     - 재귀호출
     - 정렬
+        - 선택정렬 Selection Sort   - 최소값을 찾아서 맨 앞으로
+        - 삽입정렬 Insertion Sort   - 기준값 기준 앞뒤로 보내는 정렬
+        - 버블정렬 Bubble Sort      - 기준값 기준으로 제일 큰값을 뒤로 보내는 정렬
+        - 퀵정렬   Quick Sort       - 기준값 작은값그룹/큰값그룹을 분리한뒤 다시 정렬 재귀호출
+
+    ![정렬](https://raw.githubusercontent.com/yongseok2312/ds-and-algorithm-2024/main/image/sorting.jpg)
 
 ## 7일차
 - 파이썬 자료구조/알고리즘
